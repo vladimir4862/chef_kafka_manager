@@ -1,0 +1,21 @@
+[Unit]
+Description=kafka-manager
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/kafka-manager/<%= node['kafka-manager']['pid_file']%>.pid
+WorkingDirectory=/home/
+User=kafka-manager
+Group=kafka-manager
+Restart=always
+
+OOMScoreAdjust=-100
+
+ExecStart=/usr/share/kafka-manager/bin/kafka-manager
+
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target

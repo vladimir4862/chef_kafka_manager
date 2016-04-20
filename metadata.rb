@@ -1,0 +1,8 @@
+name 'kafka-manager'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures kafka-manager'
+long_description 'Installs/Configures kafka-manager'
+version '0.1.0'
+depends 'java'
